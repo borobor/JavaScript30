@@ -26,6 +26,20 @@
 
     // Some and Every Checks
     // Array.prototype.some() // is at least one person 19 or older?
+
+		const oldEnough = people.some(function(person) {
+			let currentYear = 2022;
+			return currentYear - person.year >= 18;
+		});
+		
+		console.log({oldEnough});
+		
+		//-_-_-_-_-_-_-_-_-_-_-// now using arrow function!
+		
+		let currentYear = 2022;
+		const isAdult = people.some(person => currentYear - person.year >= 18);
+		console.log({isAdult});
+
     // Array.prototype.every() // is everyone 19 or older?
 
     // Array.prototype.find()
